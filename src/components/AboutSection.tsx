@@ -1,4 +1,6 @@
 import { Button } from "./ui/button";
+// Import your images properly
+import welderHero2 from "../assets/welderHero2.jpg";
 
 const AboutSection = () => {
   return (
@@ -10,7 +12,9 @@ const AboutSection = () => {
         <div className="flex flex-wrap items-center">
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
             <img
-              src="src/assets/welderHero2.jpg?text=About+Us&width=600&height=400"
+              src={welderHero2}
+              width={600}
+              height={400}
               alt="About Wisdom Tech & Safety Solutions Limited"
               className="rounded-lg shadow-md w-full"
             />

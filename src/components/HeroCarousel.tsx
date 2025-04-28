@@ -1,8 +1,13 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// Import your images properly
+import welderHero from "../assets/welderHero.jpg";
+import welderHero2 from "../assets/welderHero2.jpg";
+import plumperHero from "../assets/plumperHero.jpg";
+import fm200BF from "../assets/fm200BF.jpg";
+import fm200Hero from "../assets/fm200Hero.jpg";
 
 interface Slide {
   type: "image" | "video";
@@ -15,14 +20,14 @@ interface Slide {
 const slides: Slide[] = [
   {
     type: "image",
-    src: "src/assets/welderHero.jpg?height=500&width=1920",
+    src: welderHero,
     alt: "Welding and Fabrication",
     title: "Professional Welding & Fabrication",
     description: "Expert welding services with safety as our top priority",
   },
   {
     type: "image",
-    src: "src/assets/welderHero2.jpg?height=500&width=1920&text=Fire+Safety",
+    src: welderHero2,
     alt: "Fire safety equipment",
     title: "Complete Fire Safety Solutions",
     description:
@@ -30,21 +35,21 @@ const slides: Slide[] = [
   },
   {
     type: "image",
-    src: "/src/assets/plumperHero.jpg?height=500&width=1920&text=Prevention",
+    src: plumperHero,
     alt: "Piping and Fitting",
     title: "Advanced Piping & Fitting",
     description: "Reliable installation and maintenance services",
   },
   {
     type: "image",
-    src: "src/assets/fm200BF.jpg?height=500&width=1920&text=Fire+Safety",
+    src: fm200BF,
     alt: "FM200 Installation",
     title: "FM200 Fire Suppression Systems",
     description: "State-of-the-art fire suppression technology",
   },
   {
     type: "image",
-    src: "/src/assets/fm200Hero.jpg?height=500&width=1920&text=Prevention",
+    src: fm200Hero,
     alt: "Full FM200 Installation",
     title: "Complete FM200 Installation Services",
     description: "End-to-end fire suppression system solutions",
@@ -88,7 +93,7 @@ const HeroCarousel = () => {
           >
             {slide.type === "image" ? (
               <img
-                src={slide.src || "/placeholder.svg"}
+                src={slide.src}
                 alt={slide.alt || "Hero image"}
                 className="w-full h-full object-cover opacity-70"
               />

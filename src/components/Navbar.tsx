@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Menu, X, PhoneCall } from "lucide-react";
+// Import your images properly
+import wtsslogo from "../assets/wtsslogo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +44,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img
-              src="src/assets/wtsslogo.png"
+              src={wtsslogo}
               alt="Fire Safety Logo"
               width={100}
               height={100}

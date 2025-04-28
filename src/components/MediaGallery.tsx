@@ -3,6 +3,11 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { X, Play } from "lucide-react";
+import welderHero from "../assets/welderHero.jpg";
+import welderHero2 from "../assets/welderHero2.jpg";
+import plumperHero from "../assets/plumperHero.jpg";
+import fm200BF from "../assets/fm200BF.jpg";
+import fm200Hero from "../assets/fm200Hero.jpg";
 
 // Define the media types
 interface MediaItem {
@@ -21,58 +26,76 @@ const mediaItems: MediaItem[] = [
     id: 1,
     title: "Welding and Fabrication",
     description: "Professional Welding & Fabrication",
-    source: "src/assets/welderHero.jpg?text=Beach+Sunset&width=800&height=600",
+    source: welderHero,
     type: "image",
-    category: "nature",
+    category: "Welding",
   },
   {
     id: 2,
-    title: "Fire safety equipment",
+    title: "FM200 Installation",
     description:
       "Timelapse of downtown city lights at night showing urban life.",
-    source: "/placeholder.svg?text=Video+Placeholder&width=800&height=600",
-    type: "video",
+    source: fm200BF,
+    type: "image",
     thumbnail: "/placeholder.svg?text=City+Timelapse&width=400&height=300",
-    category: "urban",
+    category: "FM200 Installation",
   },
   {
     id: 3,
+    title: "FM200 Completion",
+    description:
+      "Timelapse of downtown city lights at night showing urban life.",
+    source: fm200Hero,
+    type: "image",
+    thumbnail: "/placeholder.svg?text=City+Timelapse&width=400&height=300",
+    category: "FM200 Installation",
+  },
+  // {
+  //   id: 2,
+  //   title: "FM200 Installation",
+  //   description:
+  //     "Timelapse of downtown city lights at night showing urban life.",
+  //   source: "/placeholder.svg?text=Video+Placeholder&width=800&height=600",
+  //   type: "video",
+  //   thumbnail: "/placeholder.svg?text=City+Timelapse&width=400&height=300",
+  //   category: "urban",
+  // },
+  {
+    id: 4,
     title: "Fire safety equipment",
     description:
       "Modern equipment and certified technicians for your protection",
-    source:
-      "src/assets/welderHero2.jpg?text=Mountain+View&width=800&height=600",
+    source: welderHero2,
     type: "image",
-    category: "nature",
+    category: "Welding",
   },
   {
-    id: 4,
+    id: 5,
     title: "Cooking Tutorial",
     description:
       "Learn how to make homemade pasta from scratch with simple ingredients.",
     source: "/placeholder.svg?text=Video+Placeholder&width=800&height=600",
     type: "video",
     thumbnail: "/placeholder.svg?text=Cooking+Tutorial&width=400&height=300",
-    category: "tutorials",
-  },
-  {
-    id: 5,
-    title: "Piping and Fitting",
-    description: "Reliable installation and maintenance services",
-    source:
-      "/src/assets/plumperHero.jpg?text=Abstract+Art&width=800&height=600",
-    type: "image",
-    category: "art",
+    category: "Fire Alarm",
   },
   {
     id: 6,
+    title: "Piping and Fitting",
+    description: "Reliable installation and maintenance services",
+    source: plumperHero,
+    type: "image",
+    category: "Piping and Fitting",
+  },
+  {
+    id: 7,
     title: "Concert Highlights",
     description:
       "Highlights from the summer music festival featuring various artists.",
     source: "/placeholder.svg?text=Video+Placeholder&width=800&height=600",
     type: "video",
     thumbnail: "/placeholder.svg?text=Concert+Highlights&width=400&height=300",
-    category: "events",
+    category: "Fabrication",
   },
 ];
 

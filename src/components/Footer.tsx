@@ -6,6 +6,8 @@ import {
   Linkedin,
   PhoneCall,
 } from "lucide-react";
+// Import your images properly
+import wtsslogo from "../assets/wtsslogo.png";
 
 const Footer = () => {
   return (
@@ -15,7 +17,7 @@ const Footer = () => {
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <Link to="/">
               <img
-                src="src/assets/wtsslogo.png"
+                src={wtsslogo}
                 alt="Fire Safety Logo"
                 width={100}
                 height={100}
