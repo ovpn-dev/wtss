@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import SafetyTipsGallery from "../components/SafetyTipsGallery";
 import MediaGallery from "@/components/MediaGallery";
-import MediaCarousel from "@/components/MediaCarousel";
+// import MediaCarousel from "@/components/MediaCarousel";
 
 const SafetyTips = () => {
   // Scroll to top on page load

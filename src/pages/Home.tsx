@@ -1,7 +1,7 @@
 import HeroCarousel from "../components/HeroCarousel";
 import ServicesSection from "../components/ServicesSection";
 import AboutSection from "../components/AboutSection";
-import SafetyTipsGallery from "../components/SafetyTipsGallery";
+// import SafetyTipsGallery from "../components/SafetyTipsGallery";
 import ContactSection from "../components/ContactSection";
 import MediaGallery from "@/components/MediaGallery";
 
