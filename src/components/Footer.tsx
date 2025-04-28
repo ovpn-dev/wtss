@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <Link to="/">
               <img
-                src="/placeholder.svg"
+                src="src/assets/wtsslogo.png"
                 alt="Fire Safety Logo"
                 width={100}
                 height={100}
@@ -75,7 +75,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Emergency Contact</h3>
             <div className="flex items-center mb-2">
               <PhoneCall className="mr-2" />
-              <p className="text-2xl font-bold">1-800-FIRE-HELP</p>
+              <p className="text-2xl font-bold">Tel: +234-803-325-7142</p>
             </div>
             <p className="text-sm">Available 24/7 for emergency assistance</p>
           </div>

@@ -1,8 +1,9 @@
-import HeroCarousel from "../components/HeroCarousel"
-import ServicesSection from "../components/ServicesSection"
-import AboutSection from "../components/AboutSection"
-import SafetyTipsGallery from "../components/SafetyTipsGallery"
-import ContactSection from "../components/ContactSection"
+import HeroCarousel from "../components/HeroCarousel";
+import ServicesSection from "../components/ServicesSection";
+import AboutSection from "../components/AboutSection";
+import SafetyTipsGallery from "../components/SafetyTipsGallery";
+import ContactSection from "../components/ContactSection";
+import MediaGallery from "@/components/MediaGallery";
 
 const Home = () => {
   return (
@@ -10,10 +11,11 @@ const Home = () => {
       <HeroCarousel />
       <ServicesSection />
       <AboutSection />
-      <SafetyTipsGallery />
+      <MediaGallery />
+      {/* <SafetyTipsGallery /> */}
       <ContactSection />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

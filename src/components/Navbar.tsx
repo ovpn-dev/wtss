@@ -62,8 +62,8 @@ const Navbar = () => {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "font-medium border-b-2 border-white pb-1"
-                    : "hover:underline font-medium"
+                    ? "font-bold border-b-2 border-white pb-1"
+                    : "hover:underline font-semibold"
                 }
               >
                 Home
@@ -74,8 +74,8 @@ const Navbar = () => {
                 to="/services"
                 className={({ isActive }) =>
                   isActive
-                    ? "font-medium border-b-2 border-white pb-1"
-                    : "hover:underline font-medium"
+                    ? "font-bold border-b-2 border-white pb-1"
+                    : "hover:underline font-semibold"
                 }
               >
                 Services
@@ -86,8 +86,8 @@ const Navbar = () => {
                 to="/about"
                 className={({ isActive }) =>
                   isActive
-                    ? "font-medium border-b-2 border-white pb-1"
-                    : "hover:underline font-medium"
+                    ? "font-bold border-b-2 border-white pb-1"
+                    : "hover:underline font-semibold"
                 }
               >
                 About Us
@@ -98,11 +98,11 @@ const Navbar = () => {
                 to="/safety-tips"
                 className={({ isActive }) =>
                   isActive
-                    ? "font-medium border-b-2 border-white pb-1"
-                    : "hover:underline font-medium"
+                    ? "font-bold border-b-2 border-white pb-1"
+                    : "hover:underline font-semibold"
                 }
               >
-                Safety Tips
+                Gallery
               </NavLink>
             </li>
             <li>
@@ -110,8 +110,8 @@ const Navbar = () => {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "font-medium border-b-2 border-white pb-1"
-                    : "hover:underline font-medium"
+                    ? "font-bold border-b-2 border-white pb-1"
+                    : "hover:underline font-semibold"
                 }
               >
                 Contact
@@ -123,7 +123,7 @@ const Navbar = () => {
         {/* Emergency Contact - Desktop */}
         <div className="hidden md:flex items-center">
           <PhoneCall className="mr-2" />
-          <span className="mr-4">Emergency: 1-800-FIRE-HELP</span>
+          <span className="mr-4">Tel: +234-803-325-7142</span>
           <Button variant="secondary" asChild>
             <Link to="/contact">Request Service</Link>
           </Button>
@@ -183,7 +183,7 @@ const Navbar = () => {
                     : "text-white hover:bg-red-700 px-4 py-2 rounded-md"
                 }
               >
-                Safety Tips
+                Gallery
               </NavLink>
               <NavLink
                 to="/contact"
