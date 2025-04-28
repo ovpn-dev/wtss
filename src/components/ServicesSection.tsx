@@ -1,41 +1,47 @@
 import ServiceCard from "./ServiceCard";
+import fireExtinguisher from "../assets/icons/fire-extinguisher.png";
+import alarm from "../assets/icons/alarm.png";
+import burndown from "../assets/icons/burndown.png";
+import plan from "../assets/icons/plan.png";
+import training from "../assets/icons/training.png";
+import sprinkle from "../assets/icons/sprinkle.png";
 
 const services = [
   {
     title: "Fire Extinguisher Maintenance",
     description:
       "Regular inspection and maintenance of fire extinguishers to ensure they work when needed most.",
-    icon: "/src/assets/icons/fire-extinguisher.png?text=Extinguisher&width=100&height=100",
+    icon: fireExtinguisher,
   },
   {
     title: "Alarm System Installation",
     description:
       "Professional installation of state-of-the-art fire alarm systems for early detection.",
-    icon: "/src/assets/icons/alarm.png?text=Alarm&width=100&height=100",
+    icon: alarm,
   },
   {
     title: "Emergency Planning",
     description:
       "Comprehensive emergency response planning tailored to your specific needs.",
-    icon: "/src/assets/icons/plan.png?text=Planning&width=100&height=100",
+    icon: plan,
   },
   {
     title: "Safety Training",
     description:
       "Hands-on training for employees on fire safety protocols and emergency procedures.",
-    icon: "/src/assets/icons/training.png?text=Planning&width=100&height=100",
+    icon: training,
   },
   {
     title: "Fire Risk Assessment",
     description:
       "Thorough evaluation of your property to identify and mitigate potential fire hazards.",
-    icon: "/src/assets/icons/burndown.png?text=Planning&width=100&height=100",
+    icon: burndown,
   },
   {
     title: "Sprinkler System Service",
     description:
       "Installation and maintenance of sprinkler systems for automatic fire suppression.",
-    icon: "/src/assets/icons/sprinkle.png?text=Planning&width=100&height=100",
+    icon: sprinkle,
   },
 ];
 

@@ -126,7 +126,7 @@ const HeroCarousel = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white/10"
+              className="border-white text-black hover:bg-white/10"
             >
               Learn More
             </Button>
