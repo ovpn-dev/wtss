@@ -27,7 +27,7 @@ const SafetyTips = () => {
       {/* Safety Tips Content */}
       {/* <MediaCarousel /> */}
       <MediaGallery />
-      <SafetyTipsGallery />
+      {/* <SafetyTipsGallery /> */}
 
       {/* Additional Resources */}
       <section className="py-16 bg-white">
