@@ -160,7 +160,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-medium text-gray-900">Phone</h3>
                   <p className="text-gray-600">
-                    +234-803-325-7142, 0908-205-7086
+                    +234-803-325-7142, 0807-877-7030, 0808-276-0993
                   </p>
                 </div>
               </div>

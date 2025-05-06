@@ -75,9 +75,12 @@ const Footer = () => {
           </div>
           <div className="w-full md:w-1/4">
             <h3 className="text-lg font-semibold mb-4">Emergency Contact</h3>
-            <div className="flex items-center mb-2">
-              <PhoneCall className="mr-2" />
-              <p className="text-2xl font-bold">Tel: +234-803-325-7142</p>
+            <div className="flex-1 items-center mb-2">
+              <div className="flex align-center">
+                <PhoneCall className="mr-2" />
+                <p className="text-2xl font-bold">Tel: +234-803-325-7142</p>
+              </div>
+              <p className="text-lg">Tel: 0807-877-7030, 0808-276-0993</p>
             </div>
             <p className="text-sm">Available 24/7 for emergency assistance</p>
           </div>

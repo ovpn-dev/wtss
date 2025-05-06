@@ -1,117 +1,45 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
-import { X, Play } from "lucide-react";
-import welderHero from "../assets/welderHero.jpg";
-import welderHero2 from "../assets/welderHero2.jpg";
-import plumperHero from "../assets/plumperHero.jpg";
-import fm200BF from "../assets/fm200BF.jpg";
-import fm200Hero from "../assets/fm200Hero.jpg";
-
-// Define the media types
-interface MediaItem {
-  id: number;
-  title: string;
-  description: string;
-  source: string;
-  type: "image" | "video";
-  thumbnail?: string;
-  category: string;
-}
-
-// Sample media items
-const mediaItems: MediaItem[] = [
-  {
-    id: 1,
-    title: "Welding and Fabrication",
-    description: "Professional Welding & Fabrication",
-    source: welderHero,
-    type: "image",
-    category: "Welding",
-  },
-  {
-    id: 2,
-    title: "FM200 Installation",
-    description:
-      "Timelapse of downtown city lights at night showing urban life.",
-    source: fm200BF,
-    type: "image",
-    thumbnail: "/placeholder.svg?text=City+Timelapse&width=400&height=300",
-    category: "FM200 Installation",
-  },
-  {
-    id: 3,
-    title: "FM200 Completion",
-    description:
-      "Timelapse of downtown city lights at night showing urban life.",
-    source: fm200Hero,
-    type: "image",
-    thumbnail: "/placeholder.svg?text=City+Timelapse&width=400&height=300",
-    category: "FM200 Installation",
-  },
-  // {
-  //   id: 2,
-  //   title: "FM200 Installation",
-  //   description:
-  //     "Timelapse of downtown city lights at night showing urban life.",
-  //   source: "/placeholder.svg?text=Video+Placeholder&width=800&height=600",
-  //   type: "video",
-  //   thumbnail: "/placeholder.svg?text=City+Timelapse&width=400&height=300",
-  //   category: "urban",
-  // },
-  {
-    id: 4,
-    title: "Fire safety equipment",
-    description:
-      "Modern equipment and certified technicians for your protection",
-    source: welderHero2,
-    type: "image",
-    category: "Welding",
-  },
-  {
-    id: 5,
-    title: "Cooking Tutorial",
-    description:
-      "Learn how to make homemade pasta from scratch with simple ingredients.",
-    source: "/placeholder.svg?text=Video+Placeholder&width=800&height=600",
-    type: "video",
-    thumbnail: "/placeholder.svg?text=Cooking+Tutorial&width=400&height=300",
-    category: "Fire Alarm",
-  },
-  {
-    id: 6,
-    title: "Piping and Fitting",
-    description: "Reliable installation and maintenance services",
-    source: plumperHero,
-    type: "image",
-    category: "Piping and Fitting",
-  },
-  {
-    id: 7,
-    title: "Concert Highlights",
-    description:
-      "Highlights from the summer music festival featuring various artists.",
-    source: "/placeholder.svg?text=Video+Placeholder&width=800&height=600",
-    type: "video",
-    thumbnail: "/placeholder.svg?text=Concert+Highlights&width=400&height=300",
-    category: "Fabrication",
-  },
-];
+import { X, Play, Plus } from "lucide-react";
+import {
+  mediaItems,
+  getAllCategories,
+  MediaItem,
+} from "../components/MediaData";
 
 const MediaGallery = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedMedia, setSelectedMedia] = useState<MediaItem | null>(null);
+  const [visibleCount, setVisibleCount] = useState<number>(10);
+  const [filteredMedia, setFilteredMedia] = useState<MediaItem[]>([]);
 
-  const filteredMedia =
-    selectedCategory === "all"
-      ? mediaItems
-      : mediaItems.filter((media) => media.category === selectedCategory);
+  // Filter media based on selected category
+  useEffect(() => {
+    const filtered =
+      selectedCategory === "all"
+        ? mediaItems
+        : mediaItems.filter((media) => media.category === selectedCategory);
 
-  const categories = [
-    "all",
-    ...new Set(mediaItems.map((media) => media.category)),
-  ];
+    setFilteredMedia(filtered);
+    // Reset visible count when category changes
+    setVisibleCount(9);
+  }, [selectedCategory]);
+
+  // Get all categories for filter buttons
+  const categories = getAllCategories();
+
+  // Handle showing more media items
+  const handleShowMore = () => {
+    // Increase visible count by 10 (or any number you prefer)
+    setVisibleCount((prev) => prev + 10);
+  };
+
+  // Get the currently visible items
+  const visibleMedia = filteredMedia.slice(0, visibleCount);
+  // Check if there are more items to show
+  const hasMoreItems = filteredMedia.length > visibleCount;
 
   return (
     <section id="media-gallery" className="py-16 bg-blue-50">
@@ -143,7 +71,7 @@ const MediaGallery = () => {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredMedia.map((media) => (
+          {visibleMedia.map((media) => (
             <div
               key={media.id}
               className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
@@ -181,6 +109,19 @@ const MediaGallery = () => {
             </div>
           ))}
         </div>
+
+        {/* Show More Button */}
+        {hasMoreItems && (
+          <div className="flex justify-center mt-8">
+            <Button
+              onClick={handleShowMore}
+              className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
+            >
+              <Plus size={16} />
+              Show More ({filteredMedia.length - visibleCount} more)
+            </Button>
+          </div>
+        )}
 
         {/* Lightbox */}
         {selectedMedia && (
