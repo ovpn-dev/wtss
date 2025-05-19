@@ -178,7 +178,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-medium text-gray-900">Address</h3>
                   <p className="text-gray-600">
-                    12 Kolayemi Street, Ikosi-ketu, Lagos, Nigeria
+                    1 Ademola Osinowo Street, Ikosi-ketu, Lagos, Nigeria
                   </p>
                 </div>
               </div>

@@ -59,7 +59,10 @@ const Footer = () => {
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-red-400 transition-colors">
+              <a
+                href="https://web.facebook.com/people/Wisdom-Tech-Safety-Solutions-Limited/61576679780192/"
+                className="hover:text-red-400 transition-colors"
+              >
                 <Facebook />
               </a>
               <a href="#" className="hover:text-red-400 transition-colors">

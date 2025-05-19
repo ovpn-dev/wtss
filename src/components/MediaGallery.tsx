@@ -135,15 +135,15 @@ const MediaGallery = () => {
                     className="w-full h-auto"
                   />
                 ) : (
-                  <div className="aspect-video bg-black flex items-center justify-center">
-                    {/* Video would normally go here - using placeholder for demo */}
-                    <div className="text-white text-center p-8">
-                      <Play size={48} className="mx-auto mb-4" />
-                      <p>Video player would appear here</p>
-                      <p className="text-sm text-gray-400 mt-2">
-                        ({selectedMedia.title})
-                      </p>
-                    </div>
+                  <div className="aspect-video bg-black">
+                    <video
+                      src={selectedMedia.source}
+                      poster={selectedMedia.thumbnail || "/placeholder.svg"}
+                      controls
+                      className="w-full h-full"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                 )}
                 <button

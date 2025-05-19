@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 
 const LeafletMap = () => {
   const mapRef = useRef<HTMLDivElement | null>(null);
-  // Coordinates for 12 Kolayemi Street, Ikosi-ketu, Lagos, Nigeria
+  // Coordinates for 1 Ademola Osinowo Street, Ikosi-ketu, Lagos, Nigeria
   // Replace with exact coordinates
   const position = useMemo<[number, number]>(() => [6.6045, 3.3792], []);
 
